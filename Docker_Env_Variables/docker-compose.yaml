@@ -1,0 +1,16 @@
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/usr/app/
+    environment:
+      - Read_from_Config= ${First}
+      - Read_from_Config_text= Second
+      - Read_harcoded= 15
+      - Read_hardcoded_text= Shubham
+    container_name: test_test
+
+    
